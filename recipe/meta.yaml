@@ -1,5 +1,5 @@
 {% set name = "sleek-lvalert" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.5" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 7e2c00d8c461bee79cfde5bd8cdd60ecd0cc1efa3db951d2db0fa74fa663c008
+  sha256: 1ea77d512ca8b54daeee0716be553409d34aa74554459633ff67b8d2f0f66dcb
 
 build:
   number: 0
