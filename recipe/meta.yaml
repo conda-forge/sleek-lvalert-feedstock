@@ -1,18 +1,18 @@
 {% set name = "sleek-lvalert" %}
-{% set version = "0.0.5" %}
+{% set version = "1.0.0" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 1ea77d512ca8b54daeee0716be553409d34aa74554459633ff67b8d2f0f66dcb
+  sha256: a2b9fbdbbd99c2c618140a235cbe5c4e5548652e4833fd14107367bb39159e81
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv "
+  script: '{{ PYTHON }} -m pip install . --no-deps --ignore-installed -vv '
   entry_points:
     - lvalert = sleek_lvalert.tool:main
 
