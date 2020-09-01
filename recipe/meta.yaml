@@ -22,12 +22,10 @@ requirements:
     - python
     - setuptools >=30.3.0
   run:
-    - pyasn1 >=0.1.8
-    - pyasn1-modules >=0.0.5
-    - python >=2.7
+    - python
     - safe-netrc
-    - sleekxmpp
     - setuptools
+    - slixmpp
   run_constrained:
     # this package conflicts with ligo-lvalert
     - ligo-lvalert >=9999
