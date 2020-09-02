@@ -1,5 +1,5 @@
 {% set name = "sleek-lvalert" %}
-{% set version = "1.0.0" %}
+{% set version = "2.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a2b9fbdbbd99c2c618140a235cbe5c4e5548652e4833fd14107367bb39159e81
+  sha256: 74c5309a4a0fd98d677cbc559862d273cc480e6b0f3a1131ee79fb5ca36f18a6
 
 build:
   entry_points:
     - lvalert = sleek_lvalert.tool:main
   noarch: python
   number: 0
-  script: '{{ PYTHON }} -m pip install . -vv'
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -22,12 +22,10 @@ requirements:
     - python
     - setuptools >=30.3.0
   run:
-    - pyasn1 >=0.1.8
-    - pyasn1-modules >=0.0.5
-    - python >=2.7
+    - python
     - safe-netrc
-    - sleekxmpp
     - setuptools
+    - slixmpp
   run_constrained:
     # this package conflicts with ligo-lvalert
     - ligo-lvalert >=9999
